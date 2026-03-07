@@ -1,0 +1,255 @@
+/* GLOBAL */
+
+body{
+  margin:0;
+  font-family:'Poppins',sans-serif;
+  background:linear-gradient(-45deg,#020617,#0f172a,#1e293b,#1e3a8a);
+  background-size:400% 400%;
+  animation:gradientMove 12s ease infinite;
+  color:white;
+  text-align:center;
+}
+
+/* HEADINGS */
+
+h1{
+  font-size:55px;
+  margin-top:80px;
+  color:#ffffff;
+  text-shadow:0 0 10px #3b82f6,0 0 20px #3b82f6,0 0 40px #6366f1;
+  animation:glow 2s ease-in-out infinite alternate;
+}
+
+h2{
+  font-size:40px;
+  margin-top:60px;
+}
+
+/* CONTAINER */
+
+.container{
+  margin-top:70px;
+}
+
+/* BUTTONS */
+
+button{
+  position:relative;
+  overflow:hidden;
+  padding:18px 40px;
+  font-size:18px;
+  border:none;
+  border-radius:10px;
+  margin:15px;
+  background:linear-gradient(135deg,#3b82f6,#6366f1);
+  color:white;
+  cursor:pointer;
+  transition:0.3s;
+  box-shadow:0 10px 25px rgba(0,0,0,0.5);
+}
+
+button:hover{
+  transform:scale(1.08);
+  box-shadow:0 15px 35px rgba(59,130,246,0.8);
+}
+
+/* BIG HOME BUTTONS */
+
+.big-btn{
+  font-size:24px;
+  padding:24px 60px;
+  margin:20px;
+}
+
+/* CARD */
+
+.card{
+  width:420px;
+  margin:120px auto;
+  padding:40px;
+  border-radius:20px;
+  background:rgba(255,255,255,0.05);
+  backdrop-filter:blur(15px);
+  box-shadow:0 20px 60px rgba(0,0,0,0.6);
+}
+
+/* NOTES */
+
+.note{
+  width:320px;
+  margin:30px auto;
+  padding:25px;
+  border-radius:15px;
+  background:rgba(255,255,255,0.05);
+  backdrop-filter:blur(10px);
+  box-shadow:0 10px 40px rgba(0,0,0,0.5);
+}
+
+/* INPUTS */
+
+input, textarea, select{
+  padding:12px;
+  width:260px;
+  border-radius:8px;
+  border:none;
+  background:#020617;
+  color:white;
+  margin-top:10px;
+}
+
+/* DEGREE PAGE */
+
+.subtitle{
+  opacity:0.7;
+  margin-bottom:30px;
+}
+
+.degree-buttons{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+}
+
+.degree-btn{
+  padding:16px 30px;
+  font-size:18px;
+  border:none;
+  border-radius:10px;
+  background:linear-gradient(135deg,#3b82f6,#6366f1);
+  color:white;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.degree-btn:hover{
+  transform:scale(1.1);
+  box-shadow:0 10px 25px rgba(99,102,241,0.6);
+}
+
+/* FOOTER */
+
+.footer{
+  margin-top:120px;
+  padding:40px;
+  background:rgba(255,255,255,0.03);
+  border-top:1px solid rgba(255,255,255,0.1);
+}
+
+.footer a{
+  color:#60a5fa;
+  text-decoration:none;
+}
+
+.footer-btn{
+  margin-top:15px;
+  padding:12px 25px;
+  border:none;
+  border-radius:8px;
+  background:linear-gradient(135deg,#6366f1,#8b5cf6);
+  color:white;
+  cursor:pointer;
+}
+
+.footer-btn:hover{
+  transform:scale(1.05);
+}
+
+/* UPLOAD BUTTON */
+
+.upload-btn{
+  padding:15px 40px;
+  font-size:18px;
+  border:none;
+  border-radius:10px;
+  background:linear-gradient(135deg,#6366f1,#8b5cf6);
+  color:white;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.upload-btn:hover{
+  transform:scale(1.1);
+}
+
+/* PARTICLES BACKGROUND */
+
+.particles{
+  position:fixed;
+  width:100%;
+  height:100%;
+  top:0;
+  left:0;
+  background-image:radial-gradient(circle,#3b82f6 1px,transparent 1px);
+  background-size:40px 40px;
+  opacity:0.2;
+  animation:moveParticles 20s linear infinite;
+  z-index:-1;
+}
+
+/* RIPPLE EFFECT */
+
+.ripple{
+  position:absolute;
+  width:100px;
+  height:100px;
+  background:rgba(255,255,255,0.3);
+  border-radius:50%;
+  transform:scale(0);
+  animation:ripple 0.6s linear;
+}
+
+/* QUOTE */
+
+.quote{
+  margin-top:40px;
+  font-size:20px;
+  opacity:0.8;
+}
+
+/* HERO IMAGE */
+
+.hero-img{
+  width:110px;
+  height:auto;
+  display:block;
+  margin:20px auto 10px auto;
+}
+
+/* ANIMATIONS */
+
+@keyframes ripple{
+  to{
+    transform:scale(4);
+    opacity:0;
+  }
+}
+
+@keyframes moveParticles{
+  from{
+    transform:translateY(0);
+  }
+  to{
+    transform:translateY(-200px);
+  }
+}
+
+@keyframes glow{
+  from{
+    text-shadow:0 0 10px #3b82f6;
+  }
+  to{
+    text-shadow:0 0 25px #6366f1;
+  }
+}
+
+@keyframes gradientMove{
+  0%{
+    background-position:0% 50%;
+  }
+  50%{
+    background-position:100% 50%;
+  }
+  100%{
+    background-position:0% 50%;
+  }
+}
