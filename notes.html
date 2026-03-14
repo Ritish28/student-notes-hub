@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 <title>Available Notes</title>
@@ -8,21 +9,66 @@
 
 <body>
 
-<h2>Available Notes</h2>
+<div class="particles"></div>
+
+<h2 id="subject-title">Available Notes</h2>
 
 <div class="note">
-<h3>DBMS Unit 1</h3>
-<a href="dbms_notes.pdf" download>
+<h3 id="note-name">Notes</h3>
+
+<a id="download-link" href="#" download>
 <button>Download</button>
 </a>
+
 </div>
 
-<div class="note">
-<h3>Machine Learning Basics</h3>
-<a href="dbms_notes.pdf" download>
-<button>Download</button>
-</a>
-</div>
+<script>
+
+const params = new URLSearchParams(window.location.search);
+const subject = params.get("subject");
+
+const title = document.getElementById("subject-title");
+const noteName = document.getElementById("note-name");
+const downloadLink = document.getElementById("download-link");
+
+if(subject === "dbms"){
+title.innerText = "DBMS Notes";
+noteName.innerText = "DBMS Unit 1";
+downloadLink.href = "notes/dbms_notes.pdf";
+}
+
+else if(subject === "ml"){
+title.innerText = "Machine Learning Notes";
+noteName.innerText = "ML Basics";
+downloadLink.href = "notes/ml_notes.pdf";
+}
+
+else if(subject === "os"){
+title.innerText = "Operating Systems Notes";
+noteName.innerText = "OS Notes";
+downloadLink.href = "notes/os_notes.pdf";
+}
+
+else if(subject === "cn"){
+title.innerText = "Computer Networks Notes";
+noteName.innerText = "CN Notes";
+downloadLink.href = "notes/cn_notes.pdf";
+}
+
+else if(subject === "python"){
+title.innerText = "Python Notes";
+noteName.innerText = "Python Basics";
+downloadLink.href = "notes/python_notes.pdf";
+}
+
+else{
+title.innerText = "Available Notes";
+noteName.innerText = "No Notes Available Yet";
+downloadLink.style.display = "none";
+}
+
+</script>
 
 </body>
+
 </html>
