@@ -2,51 +2,65 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Select Degree</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Select Degree</title>
 
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-  <div class="particles"></div>
+<div class="particles"></div>
 
-  <div class="card">
+<div class="card">
 
-    <h1>Select Degree</h1>
-    <p class="subtitle">Choose your program to continue</p>
+<h1>Select Degree</h1>
+<p class="subtitle">Choose your program to continue</p>
 
-    <div class="degree-buttons">
-      <button class="degree-btn">🎓 BTech</button>
-      <button class="degree-btn">📘 BSc</button>
-      <button class="degree-btn">💻 BCA</button>
-    </div>
+<div class="degree-buttons">
 
-  </div>
+<button class="degree-btn">🎓 BTech</button>
 
-  <script>
+<button class="degree-btn">💻 BCA</button>
 
-    const params = new URLSearchParams(window.location.search);
-    const mode = params.get("mode") || "view";
+<button class="degree-btn">📘 BSc</button>
 
-    const buttons = document.querySelectorAll(".degree-btn");
+<button class="degree-btn">📊 BBA</button>
 
-    buttons.forEach(button => {
-      button.addEventListener("click", () => {
+<button class="degree-btn">💼 BCom</button>
 
-        if (mode === "upload") {
-          window.location.href = "subject-upload.html";
-        } else {
-          window.location.href = "subject-view.html";
-        }
+<button class="degree-btn">🎓 MCA</button>
 
-      });
-    });
+<button class="degree-btn">🔬 MSc</button>
 
-  </script>
+<button class="degree-btn">📐 Diploma</button>
+
+</div>
+
+</div>
+
+<script>
+
+const params = new URLSearchParams(window.location.search);
+const mode = params.get("mode") || "view";
+
+const buttons = document.querySelectorAll(".degree-btn");
+
+buttons.forEach(button => {
+button.addEventListener("click", () => {
+
+if (mode === "upload") {
+window.location.href = "subject-upload.html";
+} else {
+window.location.href = "subject-view.html";
+}
+
+});
+});
+
+</script>
 
 </body>
 </html>
